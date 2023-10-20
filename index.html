@@ -2,75 +2,61 @@
 <html lang="en">
 
 <head>
-    <title>Validasi_Irfan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
-    <script>
-        function validateForm() {
-            var nrp = document.getElementById("nrp")
-            var msg = document.getElementById("msg")
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-            //cek hanya yang invalid
-            if (nrp.value == "") {
-                nrp.focus()
-                nrp.placeholder = "contoh : 5026221065"
-                alert("NRP harus diisi!")
-                return false
-            }
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-            //harus 10 digit
-            if (nrp.value.length != 10) {
-                nrp.focus()
-                alert("NRP harus 10 digit, Anda memasukkan " + nrp.value.length + " digit");
-                return false
-            }
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-            //tidak boleh non angka
-            if(isNaN(nrp.value) == true) {
-                nrp.focus()
-                msg.innerHTML = "NRP harus angka!";
-                return false
-            }
-        }
-    </script>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
-
+  <title>UTS - Muhammad Irfan Almizan</title>
 </head>
 
 <body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <div class="jumbotron">Form validasi adalah mencegah pengiriman data ke server jika ada yang invalid/ tidak
-            sesuai constraint database</div>
-        <!-- <script>
-            function validate() {
-                console.log("baris 25");
-                return false;
-
-                console.log("baris 28");
-                return true;
-
-                console.log("baris 31");
-                return false;
-            }
-        </script> -->
-        <form action="https://google.com" method="get" onsubmit="return validateForm()">
-            <div class="form-group">
-                <label for="nrp">NRP :</label>
-                <input type="text" class="form-control" id="nrp"> <div id="msg" class="text-danger"></div>
-            </div>
-            <input type="submit" value="DAFTAR" class="btn btn-primary">
-            <input type="submit" value="ULANGI" class="btn btn-warning">
-        </form>
+      <a class="navbar-brand" href="#">ORNAV.CO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link active" href="#">Shop <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Gallery</a>
+          <a class="nav-item nav-link" href="#">Available Item</a>
+          <a class="nav-item nav-link" href="#">About us</a>
+          <a class="nav-item nav-link" href="#">Contact</a>
+        </div>
+      </div>
     </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <!-- JUMBOTRON -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Welcome to<br>ORNAV</h1>
+      <p class="lead">Pastikan Anda menjalani hari dengan percaya diri karena World is Unexpected</p>
+    </div>
+  </div>
+  <!-- JUMBOTRON END -->
 </body>
 
 </html>
